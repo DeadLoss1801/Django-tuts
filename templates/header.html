@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>{{title}}</title>
+  </head>
+  <link rel="stylesheet" href="/static/index.css" />
+  <body>
+    <h1>{{content}}</h1>
+    {% for n in clist %}
+    <div>{{forloop.counter}}. {{n}}</div>
+    {%endfor%}
+
+    <br />
+    <table border="1" cellpadding="10">
+      <tr>
+        <th>Name</th>
+        <th>Phone number</th>
+      </tr>
+      {% for st in student%}
+      <tr>
+        <td>{{st.name}}</td>
+        <td>{{st.phone}}</td>
+      </tr>
+      {%endfor%}
+    </table>
+
+    {%for n in numbers%} {% if n > 20 %}
+    <div>{{n}}</div>
+    {%else%} {{"fkf"}} {%endif%} {%endfor%}
+  </body>
+</html>
